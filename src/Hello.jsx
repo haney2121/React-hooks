@@ -17,8 +17,7 @@ const Hello = props => {
 
   // console.log('hello renders: ', renders.current++);
 
-  const divRef = useRef();
-  const rect = useMeasure(divRef, data);
+  const [rect, divRef] = useMeasure(data);
 
   return (
     <div>
