@@ -17,7 +17,7 @@ export const useFetch = url => {
   useEffect(() => {
     const fetchData = async () => {
       let data = await fetch(url);
-      let response = await data.text();
+      let response = await data.json();
       if (isCurrent.current) {
         setState(prevState => ({
           ...prevState,
